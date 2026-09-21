@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pursuit | Modern 3D Simulator</title>
+    <meta name="description" content="A real-time 3D pursuit and evasion simulator with a rocket and aircraft." />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.162.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="modern3d.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="page-shell nav-wrap">
+        <a class="brand" href="../index.html">Pursuit Project</a>
+        <nav aria-label="Modern simulator navigation">
+          <a href="#simulator">3D simulator</a>
+          <a href="../index.html">Original site</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="simulator" class="page-shell">
+      <section class="intro">
+        <p class="eyebrow">Modern web edition</p>
+        <h1>Rocket versus aircraft in real 3D</h1>
+        <p>
+          A standalone Three.js interpretation of the pursuit model. Orbit the scene,
+          watch the curved trails, and compare the rocket's pursuit with the aircraft's evasion.
+        </p>
+      </section>
+
+      <section class="simulator-panel" aria-label="Modern 3D pursuit simulator">
+        <div class="stage-wrap">
+          <canvas id="threeCanvas" aria-label="Real-time 3D rocket pursuit simulation"></canvas>
+          <div class="stage-overlay">
+            <span class="badge rocket-badge">ROCKET / PURSUER</span>
+            <span class="badge plane-badge">AIRCRAFT / EVADER</span>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="modernToggle">Start 3D run</button>
+          <button id="modernReset" class="light-button">Reset view</button>
+          <button id="modernRandomize" class="light-button">Randomize</button>
+          <strong id="modernStatus">Ready</strong>
+          <span id="modernRange">Range 0.0</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-shell footer">
+      <span>Modern simulator</span>
+      <a href="../index.html">Back to the historical project</a>
+    </footer>
+  </body>
+</html>
